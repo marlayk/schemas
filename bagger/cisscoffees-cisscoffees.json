@@ -1,0 +1,20 @@
+{
+  "cdpName": "cisscoffees-cisscoffees",
+  "optimize": false,
+  "topicName": "cisscoffees-cisscoffees",
+  "jobCluster": {
+    "min_workers": 1
+  },
+  "partitioning": "--partitioning=logic=partitionByEventTimestamp,eventTimestampColumn=machineId,cdpEventDayFormat=yyyyMMdd",
+  "directAggregation": {
+    "destination": "cisscoffees/cisscoffees-aggregated",
+    "uniqueIdentifiers": [
+      "machineId",
+      "machineId"
+    ],
+    "sortKey": "cdp_datafactory_last_updated",
+    "triggerLogic": "oningestion"
+  },
+  "monitoring_window": "2w",
+  "monitoring_threshold": 0
+}
