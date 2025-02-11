@@ -1,0 +1,3 @@
+machineId,containsSugar,beverageType,buildingFloor,coffeeCreationTime
+1001,TRUE,Espresso,3,2025-02-10T12:46:38.296960
+1002,FALSE,Latte,2,2025-02-10T12:46:38.296972
